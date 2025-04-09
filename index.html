@@ -154,7 +154,8 @@
 
   <div class="conteudo">
 
-    <h2 id="drama" class="categoria">Drama</h2>
+    <!-- DRAMA -->
+    <h2 class="categoria">Drama</h2>
     <div class="cards">
       <div class="card">
         <img src="https://upload.wikimedia.org/wikipedia/pt/9/9d/Oppenheimer_2023.jpg" alt="Oppenheimer">
@@ -163,16 +164,88 @@
         <iframe src="https://www.youtube.com/embed/uYPbbksJxIg" allowfullscreen></iframe>
         <div class="botoes">
           <span class="favoritar" onclick="toggleFavorito('oppenheimer', this)">♥</span>
-          <a class="compartilhar" href="https://api.whatsapp.com/send?text=Confira Oppenheimer - https://LeSilva24.github.io/FlixIdeas" target="_blank">WhatsApp</a>
+          <a class="compartilhar" href="#" target="_blank">Compartilhar</a>
         </div>
       </div>
     </div>
 
-    <!-- Adicione outras categorias aqui se quiser -->
+    <!-- AÇÃO -->
+    <h2 class="categoria">Ação</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/e/e1/John_Wick_Chapter_4.jpg" alt="John Wick 4">
+        <h3>John Wick 4</h3>
+        <p>John Wick retorna com muita ação, combate corpo a corpo e vingança.</p>
+        <iframe src="https://www.youtube.com/embed/qEVUtrk8_B4" allowfullscreen></iframe>
+        <div class="botoes">
+          <span class="favoritar" onclick="toggleFavorito('johnwick4', this)">♥</span>
+          <a class="compartilhar" href="#" target="_blank">Compartilhar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMÉDIA -->
+    <h2 class="categoria">Comédia</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Barbie_2023_poster.jpg" alt="Barbie">
+        <h3>Barbie</h3>
+        <p>Uma comédia divertida com críticas sociais e visuais coloridos.</p>
+        <iframe src="https://www.youtube.com/embed/pBk4NYhWNMM" allowfullscreen></iframe>
+        <div class="botoes">
+          <span class="favoritar" onclick="toggleFavorito('barbie', this)">♥</span>
+          <a class="compartilhar" href="#" target="_blank">Compartilhar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUSPENSE -->
+    <h2 class="categoria">Suspense</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/d/d4/Fragmentado_poster.png" alt="Fragmentado">
+        <h3>Fragmentado</h3>
+        <p>Um suspense psicológico intenso com múltiplas personalidades.</p>
+        <iframe src="https://www.youtube.com/embed/84TouqfIsiI" allowfullscreen></iframe>
+        <div class="botoes">
+          <span class="favoritar" onclick="toggleFavorito('fragmentado', this)">♥</span>
+          <a class="compartilhar" href="#" target="_blank">Compartilhar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANIMAÇÃO -->
+    <h2 class="categoria">Animação</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Spider-Man_Across_the_Spider-Verse_poster.jpg" alt="Homem-Aranha no Aranhaverso 2">
+        <h3>Aranhaverso 2</h3>
+        <p>Uma jornada multiversal com visuais incríveis e emoção.</p>
+        <iframe src="https://www.youtube.com/embed/shW9i6k8cB0" allowfullscreen></iframe>
+        <div class="botoes">
+          <span class="favoritar" onclick="toggleFavorito('aranhaverso2', this)">♥</span>
+          <a class="compartilhar" href="#" target="_blank">Compartilhar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SÉRIES -->
+    <h2 class="categoria">Séries</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Stranger_Things_season_4.jpg" alt="Stranger Things">
+        <h3>Stranger Things</h3>
+        <p>Uma série de mistério, suspense e aventura com clima retrô dos anos 80.</p>
+        <iframe src="https://www.youtube.com/embed/yQEondeGvKo" allowfullscreen></iframe>
+        <div class="botoes">
+          <span class="favoritar" onclick="toggleFavorito('strangerthings', this)">♥</span>
+          <a class="compartilhar" href="#" target="_blank">Compartilhar</a>
+        </div>
+      </div>
+    </div>
 
   </div>
 
-  <!-- Botão para voltar ao topo -->
   <button id="topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
 
   <script>
