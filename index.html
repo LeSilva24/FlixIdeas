@@ -2,278 +2,126 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>FlixIdeas - Dicas de Filmes e Séries</title>
+  <title>Flix Ideias - Dicas de Filmes e Séries</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #0e0e0e;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-    }
-    nav {
-      background-color: #1a1a1a;
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 6px #000;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
-    }
-    nav a {
       color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #e50914;
+      margin: 0;
+      padding: 0;
     }
     header {
       background-color: #1a1a1a;
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 4px 8px #000;
-    }
-    h1 {
-      font-size: 3em;
-      color: #e50914;
-      margin-bottom: 10px;
-    }
-    p.subtitulo {
-      font-size: 1.2em;
-      color: #ccc;
-    }
-    .conteudo {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2.categoria {
-      color: #ffd700;
-      border-bottom: 2px solid #444;
-      padding-bottom: 5px;
-      margin-top: 50px;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 20px;
-    }
-    .card {
-      background-color: #1f1f1f;
-      border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-      transition: transform 0.2s;
+      text-align: center;
     }
-    .card:hover {
-      transform: translateY(-5px);
+    header h1 {
+      color: #e50914;
+      margin: 0;
     }
-    .card img {
-      width: 100%;
-      border-radius: 10px;
+    nav {
+      text-align: center;
+      background-color: #111;
+      padding: 10px 0;
     }
-    .card h3 {
-      margin-top: 15px;
-      color: #ff4c4c;
-    }
-    iframe {
-      width: 100%;
-      height: 220px;
-      border: none;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-    .botoes {
-      margin-top: 15px;
-    }
-    .favoritar {
-      font-size: 24px;
-      color: #ccc;
-      cursor: pointer;
-      margin-right: 15px;
-      transition: color 0.3s;
-    }
-    .favoritar.ativo {
-      color: #ff4c4c;
-    }
-    .compartilhar {
-      display: inline-block;
-      margin-right: 10px;
-      color: #ffd700;
+    nav a {
+      color: white;
+      margin: 0 15px;
       text-decoration: none;
-      font-size: 0.9em;
+      font-weight: bold;
     }
-    .compartilhar:hover {
-      text-decoration: underline;
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
     }
-    #topo {
+    h2 {
+      color: #e50914;
+    }
+    .filme {
+      background-color: #1f1f1f;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+    }
+    .filme img {
+      width: 100%;
+      border-radius: 10px;
+      max-width: 300px;
+    }
+    .trailer {
+      margin-top: 15px;
+      max-width: 560px;
+    }
+    .topo {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #e50914;
+      bottom: 20px;
+      right: 20px;
+      background: #e50914;
       color: white;
       border: none;
       border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      font-size: 22px;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
       cursor: pointer;
-      box-shadow: 0 2px 8px #000;
-      display: none;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="contato.html">Contato</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-    </ul>
-  </nav>
-
   <header>
-    <h1>FlixIdeas</h1>
-    <p class="subtitulo">As melhores dicas de filmes e séries organizadas por categoria</p>
+    <h1>Flix Ideias</h1>
   </header>
 
-  <div class="conteudo">
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="contato.html">Contato</a>
+    <a href="sobre.html">Sobre</a>
+  </nav>
 
-    <!-- DRAMA -->
-    <h2 class="categoria">Drama</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/9/9d/Oppenheimer_2023.jpg" alt="Oppenheimer">
-        <h3>Oppenheimer</h3>
-        <p>Um drama histórico dirigido por Christopher Nolan sobre o criador da bomba atômica.</p>
-        <iframe src="https://www.youtube.com/embed/uYPbbksJxIg" allowfullscreen></iframe>
-        <div class="botoes">
-          <span class="favoritar" onclick="toggleFavorito('oppenheimer', this)">♥</span>
-          <a class="compartilhar" href="#" target="_blank">Compartilhar</a>
-        </div>
+  <section id="drama">
+    <h2>Drama</h2>
+    <div class="filme">
+      <h3>Os 7 de Chicago</h3>
+      <img src="https://image.tmdb.org/t/p/w500/dZ1HzRug4UQH6c1XYBv9K9pPzkR.jpg" alt="Os 7 de Chicago">
+      <p>Baseado em fatos reais, um julgamento histórico contra ativistas que protestaram contra a Guerra do Vietnã.</p>
+      <div class="trailer">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/FVb5Z1OdZ14" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
+  </section>
 
-    <!-- AÇÃO -->
-    <h2 class="categoria">Ação</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/en/e/e1/John_Wick_Chapter_4.jpg" alt="John Wick 4">
-        <h3>John Wick 4</h3>
-        <p>John Wick retorna com muita ação, combate corpo a corpo e vingança.</p>
-        <iframe src="https://www.youtube.com/embed/qEVUtrk8_B4" allowfullscreen></iframe>
-        <div class="botoes">
-          <span class="favoritar" onclick="toggleFavorito('johnwick4', this)">♥</span>
-          <a class="compartilhar" href="#" target="_blank">Compartilhar</a>
-        </div>
+  <section id="acao">
+    <h2>Ação</h2>
+    <div class="filme">
+      <h3>Resgate</h3>
+      <img src="https://image.tmdb.org/t/p/w500/nygOUcBKPHFTbxsYRFZVePqgPK6.jpg" alt="Resgate">
+      <p>Um mercenário é contratado para salvar o filho de um criminoso internacional. Ação intensa do começo ao fim.</p>
+      <div class="trailer">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/L6P3nI6VnlY" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
+  </section>
 
-    <!-- COMÉDIA -->
-    <h2 class="categoria">Comédia</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Barbie_2023_poster.jpg" alt="Barbie">
-        <h3>Barbie</h3>
-        <p>Uma comédia divertida com críticas sociais e visuais coloridos.</p>
-        <iframe src="https://www.youtube.com/embed/pBk4NYhWNMM" allowfullscreen></iframe>
-        <div class="botoes">
-          <span class="favoritar" onclick="toggleFavorito('barbie', this)">♥</span>
-          <a class="compartilhar" href="#" target="_blank">Compartilhar</a>
-        </div>
+  <section id="comedia">
+    <h2>Comédia</h2>
+    <div class="filme">
+      <h3>Brooklyn Nine-Nine</h3>
+      <img src="https://image.tmdb.org/t/p/w500/fYVwppjxAKpQbUkA1epRDv6BTQS.jpg" alt="Brooklyn Nine-Nine">
+      <p>Uma divertida comédia policial com o detetive Jake Peralta e sua equipe inusitada.</p>
+      <div class="trailer">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/sEOuJ4z5aTc" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
+  </section>
 
-    <!-- SUSPENSE -->
-    <h2 class="categoria">Suspense</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/d/d4/Fragmentado_poster.png" alt="Fragmentado">
-        <h3>Fragmentado</h3>
-        <p>Um suspense psicológico intenso com múltiplas personalidades.</p>
-        <iframe src="https://www.youtube.com/embed/84TouqfIsiI" allowfullscreen></iframe>
-        <div class="botoes">
-          <span class="favoritar" onclick="toggleFavorito('fragmentado', this)">♥</span>
-          <a class="compartilhar" href="#" target="_blank">Compartilhar</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- ANIMAÇÃO -->
-    <h2 class="categoria">Animação</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Spider-Man_Across_the_Spider-Verse_poster.jpg" alt="Homem-Aranha no Aranhaverso 2">
-        <h3>Aranhaverso 2</h3>
-        <p>Uma jornada multiversal com visuais incríveis e emoção.</p>
-        <iframe src="https://www.youtube.com/embed/shW9i6k8cB0" allowfullscreen></iframe>
-        <div class="botoes">
-          <span class="favoritar" onclick="toggleFavorito('aranhaverso2', this)">♥</span>
-          <a class="compartilhar" href="#" target="_blank">Compartilhar</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- SÉRIES -->
-    <h2 class="categoria">Séries</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Stranger_Things_season_4.jpg" alt="Stranger Things">
-        <h3>Stranger Things</h3>
-        <p>Uma série de mistério, suspense e aventura com clima retrô dos anos 80.</p>
-        <iframe src="https://www.youtube.com/embed/yQEondeGvKo" allowfullscreen></iframe>
-        <div class="botoes">
-          <span class="favoritar" onclick="toggleFavorito('strangerthings', this)">♥</span>
-          <a class="compartilhar" href="#" target="_blank">Compartilhar</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <button id="topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
-
-  <script>
-    // Mostrar botão ao rolar
-    window.onscroll = function() {
-      const btn = document.getElementById('topo');
-      btn.style.display = (document.documentElement.scrollTop > 300) ? 'block' : 'none';
-    };
-
-    // Favoritar com salvamento local
-    function toggleFavorito(id, el) {
-      const favoritos = JSON.parse(localStorage.getItem("favoritos") || "{}");
-      favoritos[id] = !favoritos[id];
-      localStorage.setItem("favoritos", JSON.stringify(favoritos));
-      el.classList.toggle("ativo", favoritos[id]);
-    }
-
-    // Aplicar favoritos salvos
-    document.addEventListener("DOMContentLoaded", () => {
-      const favoritos = JSON.parse(localStorage.getItem("favoritos") || "{}");
-      for (const id in favoritos) {
-        if (favoritos[id]) {
-          const el = document.querySelector(`[onclick*="${id}"]`);
-          if (el) el.classList.add("ativo");
-        }
-      }
-    });
-  </script>
+  <a href="#topo"><button class="topo">↑</button></a>
 
 </body>
 </html>
