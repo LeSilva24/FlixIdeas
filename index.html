@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Flix Ideias - Dicas de Filmes e Séries</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     html { scroll-behavior: smooth; }
     body {
@@ -11,6 +12,7 @@
       background-color: #0e0e0e;
       color: #fff;
       margin: 0;
+      padding: 0;
     }
     header {
       background-color: #1a1a1a;
@@ -32,14 +34,25 @@
       text-decoration: none;
       font-weight: bold;
     }
+    .busca {
+      text-align: center;
+      padding: 20px;
+    }
+    .busca input {
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 5px;
+      border: none;
+    }
     section {
       padding: 40px 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
     h2 {
       color: #e50914;
-      border-bottom: 1px solid #444;
+      border-bottom: 2px solid #444;
       padding-bottom: 5px;
     }
     .filme {
@@ -47,7 +60,6 @@
       border-radius: 10px;
       padding: 20px;
       margin-bottom: 30px;
-      position: relative;
     }
     .filme img {
       width: 100%;
@@ -84,16 +96,11 @@
       font-size: 20px;
       cursor: pointer;
     }
-    .busca {
-      text-align: center;
-      padding: 20px;
-    }
-    .busca input {
-      padding: 8px;
-      border-radius: 5px;
-      border: none;
-      width: 60%;
-      max-width: 300px;
+    @media (max-width: 600px) {
+      .filme img, .trailer iframe {
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
@@ -113,7 +120,7 @@
     <input type="text" id="busca" placeholder="Buscar filmes ou séries..." onkeyup="buscar()">
   </div>
 
-  <!-- Seções -->
+  <!-- CATEGORIA: DRAMA -->
   <section id="drama">
     <h2>Drama</h2>
     <div class="filme" data-titulo="Os 7 de Chicago">
@@ -128,8 +135,80 @@
     </div>
   </section>
 
-  <!-- Adicione outras seções iguais às anteriores (ação, comédia, terror, etc.) com os botões incluídos -->
-  <!-- Para manter esta resposta leve, omiti as demais seções. Se quiser, posso enviar com todas completinhas também. -->
+  <!-- CATEGORIA: AÇÃO -->
+  <section id="acao">
+    <h2>Ação</h2>
+    <div class="filme" data-titulo="Resgate">
+      <h3>Resgate</h3>
+      <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nygOUcBKPHFTbxsYRFZVePqgPK6.jpg" alt="Resgate">
+      <p>Um mercenário é contratado para salvar o filho de um criminoso internacional.</p>
+      <div class="trailer">
+        <iframe src="https://www.youtube.com/embed/L6P3nI6VnlY" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <button class="btn favoritar" onclick="favoritar('Resgate')">Favoritar</button>
+      <button class="btn compartilhar" onclick="compartilhar('Resgate')">Compartilhar</button>
+    </div>
+  </section>
+
+  <!-- CATEGORIA: COMÉDIA -->
+  <section id="comedia">
+    <h2>Comédia</h2>
+    <div class="filme" data-titulo="Brooklyn Nine-Nine">
+      <h3>Brooklyn Nine-Nine</h3>
+      <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iSzP2o9WXAqWew0g1gI6oT5WdjT.jpg" alt="Brooklyn Nine-Nine">
+      <p>Uma divertida comédia policial com o detetive Jake Peralta e sua equipe inusitada.</p>
+      <div class="trailer">
+        <iframe src="https://www.youtube.com/embed/sEOuJ4z5aTc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <button class="btn favoritar" onclick="favoritar('Brooklyn Nine-Nine')">Favoritar</button>
+      <button class="btn compartilhar" onclick="compartilhar('Brooklyn Nine-Nine')">Compartilhar</button>
+    </div>
+  </section>
+
+  <!-- CATEGORIA: TERROR -->
+  <section id="terror">
+    <h2>Terror</h2>
+    <div class="filme" data-titulo="Invocação do Mal">
+      <h3>Invocação do Mal</h3>
+      <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wVYREutTvI2tmxr6ujrHT704wGF.jpg" alt="Invocação do Mal">
+      <p>Investigadores paranormais enfrentam uma entidade demoníaca em uma casa assombrada.</p>
+      <div class="trailer">
+        <iframe src="https://www.youtube.com/embed/k10ETZ41q5o" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <button class="btn favoritar" onclick="favoritar('Invocação do Mal')">Favoritar</button>
+      <button class="btn compartilhar" onclick="compartilhar('Invocação do Mal')">Compartilhar</button>
+    </div>
+  </section>
+
+  <!-- CATEGORIA: ROMANCE -->
+  <section id="romance">
+    <h2>Romance</h2>
+    <div class="filme" data-titulo="Para Todos os Garotos que Já Amei">
+      <h3>Para Todos os Garotos que Já Amei</h3>
+      <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cq4DNWpivUORhZ3kL3Zy0gF4p9T.jpg" alt="Para Todos os Garotos">
+      <p>Cartas de amor secretas de uma adolescente são misteriosamente enviadas aos destinatários.</p>
+      <div class="trailer">
+        <iframe src="https://www.youtube.com/embed/mTLc_RzqaJc" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <button class="btn favoritar" onclick="favoritar('Para Todos os Garotos que Já Amei')">Favoritar</button>
+      <button class="btn compartilhar" onclick="compartilhar('Para Todos os Garotos que Já Amei')">Compartilhar</button>
+    </div>
+  </section>
+
+  <!-- CATEGORIA: SÉRIES -->
+  <section id="series">
+    <h2>Séries Imperdíveis</h2>
+    <div class="filme" data-titulo="Stranger Things">
+      <h3>Stranger Things</h3>
+      <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg" alt="Stranger Things">
+      <p>Um grupo de crianças descobre segredos sobrenaturais e uma menina com poderes misteriosos.</p>
+      <div class="trailer">
+        <iframe src="https://www.youtube.com/embed/b9EkMc79ZSU" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <button class="btn favoritar" onclick="favoritar('Stranger Things')">Favoritar</button>
+      <button class="btn compartilhar" onclick="compartilhar('Stranger Things')">Compartilhar</button>
+    </div>
+  </section>
 
   <!-- Botão Voltar ao Topo -->
   <a href="#topo"><button class="topo" title="Voltar ao topo">↑</button></a>
@@ -159,11 +238,7 @@
 
       filmes.forEach(filme => {
         const titulo = filme.dataset.titulo.toLowerCase();
-        if (titulo.includes(termo)) {
-          filme.style.display = "block";
-        } else {
-          filme.style.display = "none";
-        }
+        filme.style.display = titulo.includes(termo) ? "block" : "none";
       });
     }
   </script>
