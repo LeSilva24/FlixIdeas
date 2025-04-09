@@ -1,1 +1,93 @@
 # FlixIdeas
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>FlixIdeas - Dicas de Filmes e Séries</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #e50914;
+      font-size: 2.5em;
+    }
+    .conteudo {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      padding: 20px;
+      box-shadow: 0 0 10px #000;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .card h2 {
+      color: #ffd700;
+      margin-top: 15px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FlixIdeas</h1>
+    <p>Dicas incríveis de filmes e séries com trailers e imagens</p>
+  </header>
+
+  <div class="conteudo">
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/pt/9/9d/Oppenheimer_2023.jpg" alt="Oppenheimer">
+      <h2>Filme: Oppenheimer</h2>
+      <p>Um drama histórico dirigido por Christopher Nolan sobre o criador da bomba atômica. Visual espetacular e uma trilha sonora marcante.</p>
+      <iframe src="https://www.youtube.com/embed/uYPbbksJxIg" allowfullscreen></iframe>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/6/6e/The_Last_of_Us_%28TV_series%29.jpg" alt="The Last of Us">
+      <h2>Série: The Last of Us</h2>
+      <p>Baseada no famoso jogo, a série traz um mundo pós-apocalíptico emocionante e cheio de ação com um toque humano profundo.</p>
+      <iframe src="https://www.youtube.com/embed/uLtkt8BonwM" allowfullscreen></iframe>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/5/5b/Shutterislandposter.jpg/240px-Shutterislandposter.jpg" alt="A Ilha do Medo">
+      <h2>Filme: A Ilha do Medo</h2>
+      <p>Um suspense psicológico dirigido por Martin Scorsese que vai te deixar pensando por dias.</p>
+      <iframe src="https://www.youtube.com/embed/5iaYLCiq5RM" allowfullscreen></iframe>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/pt/6/6d/DarkNetflixPoster.jpg" alt="Dark">
+      <h2>Série: Dark</h2>
+      <p>Uma série alemã cheia de mistério e viagem no tempo. Perfeita para quem gosta de tramas complexas.</p>
+      <iframe src="https://www.youtube.com/embed/cq2iTHoLrt0" allowfullscreen></iframe>
+    </div>
+
+  </div>
+
+</body>
+</html>
