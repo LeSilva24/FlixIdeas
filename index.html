@@ -5,15 +5,40 @@
   <title>FlixIdeas - Dicas de Filmes e Séries</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #0e0e0e;
       color: #ffffff;
       margin: 0;
       padding: 0;
+    }
+    nav {
+      background-color: #1a1a1a;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 6px #000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #e50914;
     }
     header {
       background-color: #1a1a1a;
@@ -72,9 +97,55 @@
       border-radius: 10px;
       margin-top: 10px;
     }
+    .botoes {
+      margin-top: 15px;
+    }
+    .favoritar {
+      font-size: 24px;
+      color: #ccc;
+      cursor: pointer;
+      margin-right: 15px;
+      transition: color 0.3s;
+    }
+    .favoritar.ativo {
+      color: #ff4c4c;
+    }
+    .compartilhar {
+      display: inline-block;
+      margin-right: 10px;
+      color: #ffd700;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+    .compartilhar:hover {
+      text-decoration: underline;
+    }
+    #topo {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #e50914;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #000;
+      display: none;
+    }
   </style>
 </head>
 <body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="contato.html">Contato</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+    </ul>
+  </nav>
 
   <header>
     <h1>FlixIdeas</h1>
@@ -83,99 +154,53 @@
 
   <div class="conteudo">
 
-    <!-- Categoria: Drama -->
-    <h2 class="categoria">Drama</h2>
-    <div class="cards"><div class="botoes">
-  <span class="favoritar" onclick="this.classList.toggle('ativo')">
-    ♥
-  </span>
-  <a class="compartilhar" target="_blank"
-     href="https://api.whatsapp.com/send?text=Confira essa dica de filme: Oppenheimer - https://LeSilva24.github.io/FlixIdeas">
-    Compartilhar no WhatsApp
-  </a>
-  <a class="compartilhar" target="_blank"
-     href="https://twitter.com/intent/tweet?text=Dica de filme: Oppenheimer - https://LeSilva24.github.io/FlixIdeas">
-    Compartilhar no Twitter
-  </a>
-</div>
+    <h2 id="drama" class="categoria">Drama</h2>
+    <div class="cards">
       <div class="card">
         <img src="https://upload.wikimedia.org/wikipedia/pt/9/9d/Oppenheimer_2023.jpg" alt="Oppenheimer">
         <h3>Oppenheimer</h3>
         <p>Um drama histórico dirigido por Christopher Nolan sobre o criador da bomba atômica.</p>
         <iframe src="https://www.youtube.com/embed/uYPbbksJxIg" allowfullscreen></iframe>
+        <div class="botoes">
+          <span class="favoritar" onclick="toggleFavorito('oppenheimer', this)">♥</span>
+          <a class="compartilhar" href="https://api.whatsapp.com/send?text=Confira Oppenheimer - https://LeSilva24.github.io/FlixIdeas" target="_blank">WhatsApp</a>
+        </div>
       </div>
     </div>
 
-    <!-- Categoria: Ação -->
-    <h2 class="categoria">Ação</h2>
-    <div class="cards">
-      <div class="card"><div class="botoes">
-  <span class="favoritar" onclick="this.classList.toggle('ativo')">
-    ♥
-  </span>
-  <a class="compartilhar" target="_blank"
-     href="https://api.whatsapp.com/send?text=Confira essa dica de filme: Oppenheimer - https://LeSilva24.github.io/FlixIdeas">
-    Compartilhar no WhatsApp
-  </a>
-  <a class="compartilhar" target="_blank"
-     href="https://twitter.com/intent/tweet?text=Dica de filme: Oppenheimer - https://LeSilva24.github.io/FlixIdeas">
-    Compartilhar no Twitter
-  </a>
-</div>
-        <img src="https://upload.wikimedia.org/wikipedia/en/6/6e/The_Last_of_Us_%28TV_series%29.jpg" alt="The Last of Us">
-        <h3>The Last of Us</h3>
-        <p>Série pós-apocalíptica cheia de ação e emoção. Baseada no famoso jogo.</p>
-        <iframe src="https://www.youtube.com/embed/uLtkt8BonwM" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <!-- Categoria: Suspense -->
-    <h2 class="categoria">Suspense</h2>
-    <div class="cards">
-      <div class="card"><div class="botoes">
-  <span class="favoritar" onclick="this.classList.toggle('ativo')">
-    ♥
-  </span>
-  <a class="compartilhar" target="_blank"
-     href="https://api.whatsapp.com/send?text=Confira essa dica de filme: Oppenheimer - https://LeSilva24.github.io/FlixIdeas">
-    Compartilhar no WhatsApp
-  </a>
-  <a class="compartilhar" target="_blank"
-     href="https://twitter.com/intent/tweet?text=Dica de filme: Oppenheimer - https://LeSilva24.github.io/FlixIdeas">
-    Compartilhar no Twitter
-  </a>
-</div>
-        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/5/5b/Shutterislandposter.jpg/240px-Shutterislandposter.jpg" alt="A Ilha do Medo">
-        <h3>A Ilha do Medo</h3>
-        <p>Suspense psicológico dirigido por Martin Scorsese. Cheio de reviravoltas.</p>
-        <iframe src="https://www.youtube.com/embed/5iaYLCiq5RM" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <!-- Categoria: Ficção Científica -->
-    <h2 class="categoria">Ficção Científica</h2>
-    <div class="cards"><div class="botoes">
-  <span class="favoritar" onclick="this.classList.toggle('ativo')">
-    ♥
-  </span>
-  <a class="compartilhar" target="_blank"
-     href="https://api.whatsapp.com/send?text=Confira essa dica de filme: Oppenheimer - https://LeSilva24.github.io/FlixIdeas">
-    Compartilhar no WhatsApp
-  </a>
-  <a class="compartilhar" target="_blank"
-     href="https://twitter.com/intent/tweet?text=Dica de filme: Oppenheimer - https://LeSilva24.github.io/FlixIdeas">
-    Compartilhar no Twitter
-  </a>
-</div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/6/6d/DarkNetflixPoster.jpg" alt="Dark">
-        <h3>Dark</h3>
-        <p>Uma série alemã cheia de mistério e viagens no tempo. Inteligente e envolvente.</p>
-        <iframe src="https://www.youtube.com/embed/cq2iTHoLrt0" allowfullscreen></iframe>
-      </div>
-    </div>
+    <!-- Adicione outras categorias aqui se quiser -->
 
   </div>
+
+  <!-- Botão para voltar ao topo -->
+  <button id="topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
+
+  <script>
+    // Mostrar botão ao rolar
+    window.onscroll = function() {
+      const btn = document.getElementById('topo');
+      btn.style.display = (document.documentElement.scrollTop > 300) ? 'block' : 'none';
+    };
+
+    // Favoritar com salvamento local
+    function toggleFavorito(id, el) {
+      const favoritos = JSON.parse(localStorage.getItem("favoritos") || "{}");
+      favoritos[id] = !favoritos[id];
+      localStorage.setItem("favoritos", JSON.stringify(favoritos));
+      el.classList.toggle("ativo", favoritos[id]);
+    }
+
+    // Aplicar favoritos salvos
+    document.addEventListener("DOMContentLoaded", () => {
+      const favoritos = JSON.parse(localStorage.getItem("favoritos") || "{}");
+      for (const id in favoritos) {
+        if (favoritos[id]) {
+          const el = document.querySelector(`[onclick*="${id}"]`);
+          if (el) el.classList.add("ativo");
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
